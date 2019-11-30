@@ -42,6 +42,11 @@ export default new Router({
       component: () => import("@/views/Settings")
     },
     {
+      name: "test",
+      path: "/test",
+      component: () => import("@/views/Test")
+    },
+    {
       path: "/@:username",
       component: () => import("@/views/Profile"),
       children: [

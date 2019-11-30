@@ -79,6 +79,16 @@
             {{ currentUser.username }}
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link
+            class="nav-link"
+            active-class="active"
+            exact
+            :to="{ name: 'test' }"
+          >
+            <i class="ion-home"></i>&nbsp;Test
+          </router-link>
+        </li>
       </ul>
     </div>
   </nav>

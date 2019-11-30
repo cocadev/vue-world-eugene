@@ -3311,13 +3311,13 @@ a.tag:focus, a.tag:hover {
 .tag-pill {
     padding-right: .6em;
     padding-left: .6em;
-    border-radius: 10rem;
+    border-radius: 1rem;
 }
 .tag-default {
-    background-color: #818a91;
+    background-color: #0365af;
 }
 .tag-default[href]:focus, .tag-default[href]:hover {
-    background-color: #687077;
+    background-color: #e706b7;
 }
 .tag-primary {
     background-color: #5cb85c;
@@ -5004,7 +5004,7 @@ a.text-danger:focus, a.text-danger:hover {
     text-decoration: none;
 }
 .tag-default.tag-outline {
-    border: 1px solid #ddd;
+    border: 1px solid rgb(115, 252, 4);
     color: #aaa!important;
     background: 0 0!important;
 }

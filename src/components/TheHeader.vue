@@ -53,7 +53,7 @@
             active-class="active"
             :to="{ name: 'article-edit' }"
           >
-            <i class="ion-compose"></i>&nbsp;New Article
+            <i class="ion-compose"></i>&nbsp;New Feed
           </router-link>
         </li>
         <li class="nav-item">

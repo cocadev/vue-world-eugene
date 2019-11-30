@@ -51,7 +51,7 @@ export default ApiService;
 
 export const TagsService = {
   get() {
-    return ApiService.get("tags");
+    return ApiService.get("tags"); // https://conduit.productionready.io/api/tags
   }
 };
 

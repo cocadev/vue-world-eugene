@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">Eugene Steve is a talent Vue expert.</h1>
-        <p class="hey">A place to share your knowledge w.</p>
+        <p class="hey">Vue is Top Javascipt Templates in the world.</p>
       </div>
     </div>
     <div class="container page">
@@ -17,7 +17,7 @@
                   class="nav-link"
                   active-class="active"
                 >
-                  Your Feed
+                  My Feed
                 </router-link>
               </li>
               <li class="nav-item">
@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-3">
           <div class="sidebar">
-            <p>Popular Tags</p>
+            <p>Hash Tags</p>
             <div class="tag-list">
               <RwvTag v-for="(tag, index) in tags" :name="tag" :key="index">
               </RwvTag>

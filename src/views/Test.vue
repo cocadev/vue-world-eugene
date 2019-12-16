@@ -1,4 +1,4 @@
- <!-- <template>
+<template>
   <div class="settings-page">
     <div class="container page">
       <div class="row">
@@ -16,7 +16,7 @@
           <hr />
 
           <ol>
-            <li v-for="todo in todos">
+            <li v-for="todo in todos" v-bind:key="todo">
               {{ todo.text }}
             </li>
           </ol>
@@ -29,7 +29,7 @@
 
           <hr />
           <ol>
-            <li v-for="grocery in groceryList">
+            <li v-for="grocery in groceryList" v-bind:key="grocery">
               {{ grocery.text }}
             </li>
           </ol>
@@ -112,36 +112,42 @@
           <hr />
 
           <ul id="example-2">
-            <li v-for="item in items">
+            <li v-for="item in items" v-bind:key="item">
               {{ item.message }}
             </li>
-            <li v-for="(item, index) in items">
+            <li v-for="(item, index) in items" v-bind:key="(item, index)">
               {{ parentMessage }} - {{ index }} - {{ item.message }}
             </li>
           </ul>
 
           <ul id="v-for-object" class="demo">
-            <li v-for="value in object">
+            <li v-for="value in object" v-bind:key="value">
               {{ value }}
             </li>
           </ul>
 
-          <div v-for="(value, name) in object">{{ name }}: {{ value }}</div>
+          <div v-for="(value, name) in object" v-bind:key="(value, name)">
+            {{ name }}: {{ value }}
+          </div>
 
-          <div v-for="(value, name, index) in object">
+          <div
+            v-for="(value, name, index) in object"
+            v-bind:key="(value, name, index)"
+          >
             {{ index }}. {{ name }}: {{ value }}
           </div>
 
           <hr />
 
-          <li v-for="n in evenNumbers">{{ n }}</li>
-          <li v-for="n in even(numbers)">{{ n }}</li>
-          <span v-for="n in 10">{{ n }} </span>
+          <li v-for="n in evenNumbers" v-bind:key="n">{{ n }}</li>
+          <li v-for="n in even(numbers)" v-bind:key="n">{{ n }}</li>
+
+          <span v-for="n in 10" v-bind:key="n">{{ n }} </span>
 
           <ul>
             <template v-for="item in items">
-              <li>{{ item.msg }}</li>
-              <li class="divider" role="presentation"></li>
+              <li v-bind:key="item">{{ item.msg }}</li>
+              <li v-bind:key="item" class="divider" role="presentation"></li>
             </template>
           </ul>
         </div>
@@ -149,7 +155,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 import axios from "axios";
@@ -241,7 +246,7 @@ export default {
     },
 
     // whenever question changes, this function will run
-    question: function(newQuestion, oldQuestion) {
+    question: function() {
       this.answer = "Waiting for you to stop typing...";
       this.debouncedGetAnswer();
     }

@@ -178,8 +178,8 @@ export default {
         { id: 2, text: "Whatever else humans are supposed to eat" }
       ],
       isButtonDisabled: true,
-      firstName: "Eugene",
-      lastName: "Pizzerbert",
+      firstName: "Junel",
+      lastName: "Ambajic",
       // fullName: 'Panda DEV'
 
       question: "",
@@ -263,7 +263,7 @@ export default {
   },
   methods: {
     reverseMessage: function() {
-      console.log("Hello Eugene: " + new Date());
+      console.log("Hello Kingofdevs: " + new Date());
       this.message = this.message
         .split("")
         .reverse()

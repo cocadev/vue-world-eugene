@@ -2,7 +2,7 @@
   <div class="home-page">
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">Eugene Steve is a talent Vue expert.</h1>
+        <h1 class="logo-font">Junel Ambajic is a talent Vue expert.</h1>
         <p class="hey">Vue is Top Javascipt Templates in the world.</p>
       </div>
     </div>

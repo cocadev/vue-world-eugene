@@ -65,7 +65,7 @@ export const ArticlesService = {
     return ApiService.get("articles", slug);
   },
   create(params) {
-    return ApiService.post("articles", { article: params });
+    return ApiService.post("articles/", { article: params });
   },
   update(slug, params) {
     return ApiService.update("articles", slug, { article: params });
@@ -82,11 +82,11 @@ export const CommentsService = {
         "[RWV] CommentsService.get() article slug required to fetch comments"
       );
     }
-    return ApiService.get("articles", `${slug}/comments`);
+    return ApiService.get("articles", `${slug}/comments/`);
   },
 
   post(slug, payload) {
-    return ApiService.post(`articles/${slug}/comments`, {
+    return ApiService.post(`articles/${slug}/comments/`, {
       comment: { body: payload }
     });
   },
@@ -98,9 +98,9 @@ export const CommentsService = {
 
 export const FavoriteService = {
   add(slug) {
-    return ApiService.post(`articles/${slug}/favorite`);
+    return ApiService.post(`articles/${slug}/favorite/`);
   },
   remove(slug) {
-    return ApiService.delete(`articles/${slug}/favorite`);
+    return ApiService.delete(`articles/${slug}/favorite/`);
   }
 };
